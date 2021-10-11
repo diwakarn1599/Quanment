@@ -8,8 +8,27 @@ import { Component, OnInit } from '@angular/core';
 export class HomeComponent implements OnInit {
 
   constructor() { }
-
+  selected = 'Meters';
   ngOnInit(): void {
   }
-
+  length=[
+    {
+      value:"Meters"
+    },
+    {
+      value:"Kilometers"
+    },
+    {
+      value:"Centimeters"
+    },
+    {
+      value:"Millimeter"
+    },
+    {
+      value:"Micrometer"
+    },
+    {
+      value:"Foot"
+    }
+  ]
 }

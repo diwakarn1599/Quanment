@@ -1,1 +1,68 @@
-<p>home works!</p>
+<mat-toolbar class="ToolBar">
+    <div class="header">
+        <div class="menu">
+            <div>
+                <span class="title">Quanment</span>
+            </div>
+        </div>
+        <div class="endIcons">
+            <button mat-flat-button class="historyButton">History</button>
+        </div>
+    </div>
+</mat-toolbar>
+<div class="appTitle">
+    <span class="welcomeQuote">Welcome To Quantity Measurement</span>
+</div>
+<div class="container">
+    <div class="MeasurementTypes">
+        <span class="choose">CHOOSE TYPE</span>
+        <div>
+            <div class="content">
+                <div class="imageBox">
+                    <div class="box">
+                        <img src="../../../assets/scale.svg" class="measurementImage"><br>
+                        <span class="labels">Length</span>
+                    </div>
+                </div>
+                <div class="imageBox">
+                    <div class="box">
+                        <img src="../../../assets/hot.svg" class="measurementImage"><br>
+                        <span class="labels">Temperature</span>
+                    </div>
+                </div>
+                <div class="imageBox">
+                    <div class="box">
+                        <img src="../../../assets/beaker.svg" class="measurementImage"><br>
+                        <span class="labels">Volume</span>
+                    </div>
+                </div>
+            </div>
+            <div class="calculation">
+                <div>
+                    <span style="color: #6D6E70;font-weight: 500;">FROM</span>
+                    <div class="FromBox">
+                        <input type="text" class="inputfield">
+                        <mat-divider></mat-divider>
+                        <mat-form-field appearance="fill" class="selectField">
+                            <mat-select [(value)]="selected">
+                                <mat-option *ngFor="let len of length" value="len.value">{{len.value}}</mat-option>
+                            </mat-select>
+                        </mat-form-field>
+                    </div>
+                </div>
+                <div style="margin-left: 15px;">
+                    <span style="color: #6D6E70;font-weight: 500;">TO</span>
+                    <div class="FromBox">
+                        <input type="text" class="inputfield">
+                        <mat-divider></mat-divider>
+                        <mat-form-field appearance="fill" class="selectField">
+                            <mat-select [(value)]="selected">
+                                <mat-option *ngFor="let len of length" value="len.value">{{len.value}}</mat-option>
+                            </mat-select>
+                        </mat-form-field>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
